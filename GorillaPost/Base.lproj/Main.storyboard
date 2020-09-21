@@ -16,19 +16,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7n-CT-uve">
-                                <rect key="frame" x="20" y="110" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="20" y="110" width="374" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ica-yQ-cju">
-                                <rect key="frame" x="20" y="146" width="374" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <rect key="frame" x="20" y="143" width="374" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4o-3f-K14">
-                                <rect key="frame" x="0.0" y="185" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="183.5" width="414" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="2qP-YD-s8A"/>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xWg-xL-TsU">
-                                <rect key="frame" x="0.0" y="260" width="414" height="452"/>
+                                <rect key="frame" x="0.0" y="258.5" width="414" height="453.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="140" id="EAe-gY-GHj" customClass="PostTableViewCell" customModule="GorillaPost" customModuleProvider="target">
@@ -94,19 +94,26 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u5L-zw-cGF">
                                 <rect key="frame" x="0.0" y="712" width="414" height="150"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="expand" translatesAutoresizingMaskIntoConstraints="NO" id="UgV-c3-n5Z">
-                                        <rect key="frame" x="374" y="110" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="Le0-cj-AZx"/>
-                                            <constraint firstAttribute="height" constant="20" id="yNu-wG-MUx"/>
-                                        </constraints>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I6p-EO-qOH">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eoh-qD-tlJ">
+                                        <rect key="frame" x="384" y="118" width="20" height="22"/>
+                                        <state key="normal" image="expand"/>
+                                        <connections>
+                                            <action selector="expandAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gg1-Cx-0nw"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.098039215690000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="UgV-c3-n5Z" secondAttribute="trailing" constant="20" id="0DY-3J-P7A"/>
+                                    <constraint firstAttribute="bottom" secondItem="I6p-EO-qOH" secondAttribute="bottom" id="IHj-6G-Yi4"/>
+                                    <constraint firstAttribute="trailing" secondItem="I6p-EO-qOH" secondAttribute="trailing" id="IcJ-CL-VdB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Eoh-qD-tlJ" secondAttribute="bottom" constant="10" id="JCU-JZ-AIr"/>
+                                    <constraint firstItem="I6p-EO-qOH" firstAttribute="leading" secondItem="u5L-zw-cGF" secondAttribute="leading" id="JGP-ao-SWd"/>
                                     <constraint firstAttribute="height" constant="150" id="Yks-fS-zy4"/>
-                                    <constraint firstAttribute="bottom" secondItem="UgV-c3-n5Z" secondAttribute="bottom" constant="20" id="wO1-4z-wQJ"/>
+                                    <constraint firstItem="I6p-EO-qOH" firstAttribute="top" secondItem="u5L-zw-cGF" secondAttribute="top" id="YtV-jA-TYt"/>
+                                    <constraint firstAttribute="trailing" secondItem="Eoh-qD-tlJ" secondAttribute="trailing" constant="10" id="rOH-Xf-fGv"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -134,7 +141,9 @@
                     <navigationItem key="navigationItem" id="1V4-wB-G1X"/>
                     <connections>
                         <outlet property="dateLabel" destination="I7n-CT-uve" id="2Pd-lB-juC"/>
+                        <outlet property="expandConstraint" destination="Yks-fS-zy4" id="oXD-lK-2sm"/>
                         <outlet property="helloLabel" destination="Ica-yQ-cju" id="g0s-OO-0Ch"/>
+                        <outlet property="imageView" destination="I6p-EO-qOH" id="vM2-X3-5Dk"/>
                         <outlet property="tableView" destination="xWg-xL-TsU" id="tZw-eO-E2C"/>
                     </connections>
                 </viewController>

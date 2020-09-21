@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol FeedDelegate {
-    func addPost(_ post: Post)
-}
-
 class FeedViewModel {
     
     var posts: [Post] = []

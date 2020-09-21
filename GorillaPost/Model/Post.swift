@@ -10,7 +10,7 @@ import Foundation
 
 class Post: Codable {
     enum CodingKeys: String, CodingKey {
-        case id = "id"
+        case id
         case firstName = "first_name"
         case lastName = "last_name"
         case body = "post_body"

@@ -8,13 +8,21 @@
 
 import UIKit
 
+protocol FeedDelegate {
+    func addPost(post: Post, image: UIImage?)
+}
+
 class FeedViewController: UIViewController {
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var helloLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var expandConstraint: NSLayoutConstraint!
     
     let viewModel = FeedViewModel()
+    
+    var expanded = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,15 +42,20 @@ class FeedViewController: UIViewController {
     }
     
     func configureView() {
-        dateLabel.text = Date().stringByFormat("EEEE, MMM d")
+        dateLabel.text = Date().stringByFormat("EEEE, MMM d").uppercased()
         helloLabel.text = "Hello Gorilla"
     }
     
     func configureBar() {
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 15, height: 15))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         imageView.contentMode = .scaleAspectFit
         imageView.image = #imageLiteral(resourceName: "logo")
         self.navigationItem.titleView = imageView
+    }
+    
+    @IBAction func expandAction(_ sender: Any) {
+        expandConstraint.constant = expanded ? 150 : 500
+        expanded = !expanded
     }
     
     // MARK: - Navigation
@@ -75,10 +88,13 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension FeedViewController: FeedDelegate {
-    func addPost(_ post: Post) {
+    func addPost(post: Post, image: UIImage?) {
         viewModel.posts.insert(post, at: 0)
         DispatchQueue.main.async {
             self.tableView.reloadData()
+        }
+        if let image = image {
+            self.imageView.image = image
         }
     }
 }

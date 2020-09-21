@@ -14,6 +14,8 @@ class CreatePostViewController: UIViewController {
     
     var delegate: FeedDelegate?
     
+    var image: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         counterLabel.text = "0/150"
@@ -33,7 +35,7 @@ class CreatePostViewController: UIViewController {
     @IBAction func shareAction(_ sender: Any) {
         let post = Post(id: 100, firstName: "Diego", lastName: "Giraldo", body: messageTextView.text, date: String(Date().timeIntervalSince1970))
         
-        delegate?.addPost(post)
+        delegate?.addPost(post: post, image: image)
         
         navigationController?.popViewController(animated: true)
     }
@@ -51,8 +53,9 @@ extension CreatePostViewController: UITextViewDelegate {
 
 extension CreatePostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        // Implementation not speficied in Gorilla requirements
         picker.dismiss(animated: true, completion: nil)
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        self.image = image
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

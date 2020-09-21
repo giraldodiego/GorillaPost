@@ -19,7 +19,19 @@
 		5B9ECF86251806B400F231DE /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9ECF85251806B400F231DE /* PostTableViewCell.swift */; };
 		5B9ECF8825180C5B00F231DE /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9ECF8725180C5B00F231DE /* FeedViewModel.swift */; };
 		5B9ECF8B25181A6000F231DE /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9ECF8A25181A6000F231DE /* Date+Extension.swift */; };
+		5B9ECF932518224400F231DE /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9ECF922518224400F231DE /* DateExtensionTests.swift */; };
+		5B9ECF9B2518233800F231DE /* PostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9ECF9A2518233800F231DE /* PostTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B9ECF952518224400F231DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B9ECF562517FA5600F231DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B9ECF5D2517FA5600F231DE;
+			remoteInfo = GorillaPost;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5B9ECF5E2517FA5600F231DE /* GorillaPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GorillaPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,10 +48,21 @@
 		5B9ECF85251806B400F231DE /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		5B9ECF8725180C5B00F231DE /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		5B9ECF8A25181A6000F231DE /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		5B9ECF902518224400F231DE /* GorillaPostTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorillaPostTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9ECF922518224400F231DE /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
+		5B9ECF942518224400F231DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B9ECF9A2518233800F231DE /* PostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5B9ECF5B2517FA5600F231DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B9ECF8D2518224400F231DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				5B9ECF602517FA5600F231DE /* GorillaPost */,
+				5B9ECF912518224400F231DE /* GorillaPostTests */,
 				5B9ECF5F2517FA5600F231DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				5B9ECF5E2517FA5600F231DE /* GorillaPost.app */,
+				5B9ECF902518224400F231DE /* GorillaPostTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +182,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		5B9ECF912518224400F231DE /* GorillaPostTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B9ECF922518224400F231DE /* DateExtensionTests.swift */,
+				5B9ECF9A2518233800F231DE /* PostTests.swift */,
+				5B9ECF942518224400F231DE /* Info.plist */,
+			);
+			path = GorillaPostTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,6 +212,24 @@
 			productReference = 5B9ECF5E2517FA5600F231DE /* GorillaPost.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5B9ECF8F2518224400F231DE /* GorillaPostTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B9ECF972518224400F231DE /* Build configuration list for PBXNativeTarget "GorillaPostTests" */;
+			buildPhases = (
+				5B9ECF8C2518224400F231DE /* Sources */,
+				5B9ECF8D2518224400F231DE /* Frameworks */,
+				5B9ECF8E2518224400F231DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B9ECF962518224400F231DE /* PBXTargetDependency */,
+			);
+			name = GorillaPostTests;
+			productName = GorillaPostTests;
+			productReference = 5B9ECF902518224400F231DE /* GorillaPostTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -189,6 +242,10 @@
 				TargetAttributes = {
 					5B9ECF5D2517FA5600F231DE = {
 						CreatedOnToolsVersion = 11.7;
+					};
+					5B9ECF8F2518224400F231DE = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 5B9ECF5D2517FA5600F231DE;
 					};
 				};
 			};
@@ -206,6 +263,7 @@
 			projectRoot = "";
 			targets = (
 				5B9ECF5D2517FA5600F231DE /* GorillaPost */,
+				5B9ECF8F2518224400F231DE /* GorillaPostTests */,
 			);
 		};
 /* End PBXProject section */
@@ -218,6 +276,13 @@
 				5B9ECF6E2517FA5900F231DE /* LaunchScreen.storyboard in Resources */,
 				5B9ECF6B2517FA5900F231DE /* Assets.xcassets in Resources */,
 				5B9ECF692517FA5600F231DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B9ECF8E2518224400F231DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +305,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5B9ECF8C2518224400F231DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9ECF932518224400F231DE /* DateExtensionTests.swift in Sources */,
+				5B9ECF9B2518233800F231DE /* PostTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B9ECF962518224400F231DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B9ECF5D2517FA5600F231DE /* GorillaPost */;
+			targetProxy = 5B9ECF952518224400F231DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5B9ECF672517FA5600F231DE /* Main.storyboard */ = {
@@ -410,6 +492,44 @@
 			};
 			name = Release;
 		};
+		5B9ECF982518224400F231DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GorillaPostTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.diego.GorillaPostTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GorillaPost.app/GorillaPost";
+			};
+			name = Debug;
+		};
+		5B9ECF992518224400F231DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GorillaPostTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.diego.GorillaPostTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GorillaPost.app/GorillaPost";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -427,6 +547,15 @@
 			buildConfigurations = (
 				5B9ECF732517FA5900F231DE /* Debug */,
 				5B9ECF742517FA5900F231DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B9ECF972518224400F231DE /* Build configuration list for PBXNativeTarget "GorillaPostTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B9ECF982518224400F231DE /* Debug */,
+				5B9ECF992518224400F231DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
